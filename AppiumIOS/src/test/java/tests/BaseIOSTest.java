@@ -24,7 +24,7 @@ public class BaseIOSTest {
 			
 			DesiredCapabilities cap = new DesiredCapabilities();
 			cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "13.3");
-		    cap.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 11 Pro Max");  //Device name should be clear and case sensitive
+		    cap.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 8");  //Device name should be clear and case sensitive
 		    cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);   //	Very Important	
 		    //IOS_XCUI_TEST  - Framework provided by Apple to test their app
 		    cap.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 50000); //Amount of time in ms to wait for instruments before assuming it hung and failing the session
