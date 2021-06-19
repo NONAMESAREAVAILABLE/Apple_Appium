@@ -16,7 +16,7 @@ public class IosClickTest extends BaseIOSTest  {
 		IOSDriver<IOSElement> drivero = Desired();
 
 		drivero.findElementByAccessibilityId("Alert Views").click();
-		drivero.findElementByAccessibilityId("Text Entry").click();
+	    drivero.findElementByAccessibilityId("Text Entry").click();
 		System.out.println("Done1");
 		drivero.findElement(By.xpath("//XCUIElementTypeTextField")).sendKeys("Hello World");  //In Xpath you can also use just the tag name
 		// In the appium desktop inspector if you can send keys to any text box using Appium Desktop then that element is accessible using that tag name or that tag properties
@@ -29,8 +29,11 @@ public class IosClickTest extends BaseIOSTest  {
 		System.out.println(text);
 
 		drivero.findElementByAccessibilityId("Confirm").click();
-		System.out.println("Done till here");
-		drivero.findElement(By.name("UIKitCatalog")).click();
+		System.out.println("Done till here"); 
+		
+		Thread.sleep(5000);
+		drivero.findElement(By.xpath("//XCUIElementTypeButton[contains(@name, 'UIKitCatalog')]")).click();
+		// The back button takes time to load after confirm dialogue box closes, so it was not getting tapped before
 		Thread.sleep(7000);
 
 
