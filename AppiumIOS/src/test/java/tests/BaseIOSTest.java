@@ -36,6 +36,7 @@ public class BaseIOSTest {
 		    URL url = new URL("http://127.0.0.1:4723/wd/hub");
 		    
 		    driver = new IOSDriver<IOSElement>(url, cap);
+		    
 		    return driver;
 	    
 	}
